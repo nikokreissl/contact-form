@@ -1,0 +1,31 @@
+.left-button {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.right-button {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.input-label {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bolder;
+  color: var(--placeholder-color);
+  display: block;
+  width: 100px;
+  padding: 5px 10px;
+  border: 1px solid var(--border-gray);
+  cursor: pointer;
+  transition: 0.5s all ease;
+}
+
+.input-button {
+  display: none;
+}
+
+.input-button:checked + .input-label {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}

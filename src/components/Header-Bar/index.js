@@ -19,7 +19,7 @@ export default function HeaderBar() {
       <img
         src={windowWidth < 1200 ? MobileLogo : DesktopLogo}
         alt="ottonova"
-        height={26}
+        height={24}
       />
     </nav>
   );

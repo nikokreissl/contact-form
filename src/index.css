@@ -5,6 +5,13 @@
 }
 
 :root {
+  font-family: "Figtree", Avenir, Arial, sans-serif;
+  --blue: #016ae6;
+  --pink: #f65b96;
+  --placeholder-color: #999fb7;
+  --border-gray: #cccfdb;
+  --text: #00114b;
+  --white: #fff;
 }
 
 body {

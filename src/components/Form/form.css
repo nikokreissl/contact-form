@@ -1,0 +1,28 @@
+.loaded {
+  animation: slideIn 0.5s ease-in-out;
+  opacity: 1;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-wrapper {
+  padding: 27.5px;
+}
+
+form {
+  font-family: "Figtree", Avenir, Arial, sans-serif;
+  margin: auto;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
