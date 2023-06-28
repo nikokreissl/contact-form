@@ -25,26 +25,3 @@ form {
   flex-direction: column;
   justify-content: center;
 }
-
-.submit-button {
-  cursor: pointer;
-  color: var(--white);
-  background-color: var(--blue);
-  font-family: inherit;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  transition: all 0.5s ease-in;
-}
-
-.submit-button:hover {
-  background-color: #006be6;
-}
-
-.submit-button:disabled {
-  cursor: default;
-  background-color: var(--border-gray);
-}

@@ -8,6 +8,7 @@
   font-family: "Figtree", Avenir, Arial, sans-serif;
   --blue: #0077ff;
   --pink: #f65b96;
+  --green: #00b67a;
   --placeholder-color: #999fb7;
   --border-gray: #cccfdb;
   --text: #00114b;
@@ -18,6 +19,11 @@ body {
   font-family: "Figtree", Avenir, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+p {
+  color: var(--text);
 }
 
 code {
