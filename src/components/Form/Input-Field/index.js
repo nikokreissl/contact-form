@@ -1,7 +1,13 @@
 import { useState } from "react";
 import "./input-field.css";
 
-export default function InputField({ type, pattern, fieldName, title }) {
+export default function InputField({
+  type,
+  pattern,
+  fieldName,
+  title,
+  validateInput,
+}) {
   const [inputValue, setInputValue] = useState("");
   const [validationMessage, setValidationMessage] = useState("");
 
@@ -12,8 +18,10 @@ export default function InputField({ type, pattern, fieldName, title }) {
 
     if (!regex.test(value)) {
       setValidationMessage(`Bitte ${fieldName} eingeben`);
+      validateInput(false);
     } else {
       setValidationMessage("");
+      validateInput(true);
     }
   }
   return (
