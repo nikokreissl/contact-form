@@ -15,6 +15,7 @@ export default function InputField({
     const pattern = event.target.pattern;
     const value = event.target.value;
     const regex = new RegExp(pattern);
+    console.log(regex.test(value));
 
     if (value === "") {
       setValidationMessage(`Bitte ${fieldName} eingeben`);

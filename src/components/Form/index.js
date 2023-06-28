@@ -41,14 +41,14 @@ export default function Form() {
         <div>
           <InputField
             type="text"
-            pattern="[A-Za-z\s\-]+"
+            pattern="^[a-zA-ZäöüÄÖÜß\s-]*$"
             fieldName="Vorname"
             title='Nur Buchstaben, Leerzeichen und "-" erlaubt'
             validateInput={checkFirstNameValidation}
           />
           <InputField
             type="text"
-            pattern="[A-Za-z\s\-]+"
+            pattern="^[a-zA-ZäöüÄÖÜß\s-]*$"
             fieldName="Nachname"
             title='Nur Buchstaben, Leerzeichen und "-" erlaubt'
             validateInput={checkLastNameValidation}
@@ -65,7 +65,7 @@ export default function Form() {
           <InputField
             typ="tel"
             pattern="[0-9+\-()/]+"
-            fieldName="Telefonnummer"
+            fieldName="Telefonnummer (inkl. Vorwahl)"
             title="Nur Zahlen und Sonderzeichen +, -, /, (, ) erlaubt"
             validateInput={checkPhoneValidation}
           />
