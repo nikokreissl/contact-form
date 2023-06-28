@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./input-field.css";
 
 export default function InputField({
@@ -16,12 +16,28 @@ export default function InputField({
     const value = event.target.value;
     const regex = new RegExp(pattern);
 
-    if (!regex.test(value)) {
+    if (value === "") {
       setValidationMessage(`Bitte ${fieldName} eingeben`);
+    } else if (!regex.test(value)) {
+      if (type !== "email") {
+        setValidationMessage(title);
+      }
       validateInput(false);
     } else {
       setValidationMessage("");
       validateInput(true);
+    }
+  }
+
+  function checkInputOnLeave(event) {
+    const pattern = event.target.pattern;
+    const value = event.target.value;
+    const regex = new RegExp(pattern);
+
+    if (inputValue === "") {
+      setValidationMessage(`Bitte ${fieldName} eingeben`);
+    } else if (!regex.test(value) && type === "email") {
+      setValidationMessage(`Bitte E-Mail-Format prüfen: mail@beispiel.de`);
     }
   }
   return (
@@ -29,7 +45,7 @@ export default function InputField({
       <input
         onChange={(e) => setInputValue(e.target.value)}
         onInput={checkInput}
-        onBlur={checkInput}
+        onBlur={checkInputOnLeave}
         placeholder={fieldName}
         className="input-field"
         type={type}

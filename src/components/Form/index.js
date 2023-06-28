@@ -43,14 +43,14 @@ export default function Form() {
             type="text"
             pattern="[A-Za-z\s\-]+"
             fieldName="Vorname"
-            title="Nur Buchstaben, Leerzeichen und Bindestriche erlaubt"
+            title='Nur Buchstaben, Leerzeichen und "-" erlaubt'
             validateInput={checkFirstNameValidation}
           />
           <InputField
             type="text"
             pattern="[A-Za-z\s\-]+"
             fieldName="Nachname"
-            title="Nur Buchstaben, Leerzeichen und Bindestriche erlaubt"
+            title='Nur Buchstaben, Leerzeichen und "-" erlaubt'
             validateInput={checkLastNameValidation}
           />
         </div>
