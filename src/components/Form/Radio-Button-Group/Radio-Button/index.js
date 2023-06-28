@@ -26,7 +26,7 @@ export default function RadioButton({
         }`}
         htmlFor={value}
       >
-        <RadioButtonImage />
+        <RadioButtonImage value={value} isChecked={isChecked} />
         {value}
       </label>
     </>

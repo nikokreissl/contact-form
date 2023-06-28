@@ -9,20 +9,18 @@ export default function RadioButtonGroup() {
     setSelectedValue(event.target.value);
   };
 
-  console.log(selectedValue);
-
   return (
     <div className="radio-button-container">
       <RadioButton
         value="Female"
         position="left"
-        checked={selectedValue === "Female"}
+        isChecked={selectedValue === "Female"}
         onUpdateSelection={handleRadioChange}
       />
       <RadioButton
         value="Male"
         position="right"
-        checked={selectedValue === "Male"}
+        isChecked={selectedValue === "Male"}
         onUpdateSelection={handleRadioChange}
       />
     </div>
