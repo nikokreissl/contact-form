@@ -1,6 +1,7 @@
 import React from "react";
 import "./radio-buttons.css";
-import RadioButtonImage from "./Radio-Button-Image";
+import FemaleStickFigure from "../../../Stick-Figures/Female";
+import MaleStickFigure from "../../../Stick-Figures/Male";
 
 export default function RadioButton({
   value,
@@ -26,7 +27,21 @@ export default function RadioButton({
         }`}
         htmlFor={value}
       >
-        <RadioButtonImage value={value} isChecked={isChecked} />
+        {value === "Frau" ? (
+          <FemaleStickFigure
+            size={50}
+            colorActive="var(--white)"
+            colorInactive="var(--placeholder-color)"
+            trigger={isChecked}
+          />
+        ) : (
+          <MaleStickFigure
+            size={50}
+            colorActive="var(--white)"
+            colorInactive="var(--placeholder-color)"
+            trigger={isChecked}
+          />
+        )}
         {value}
       </label>
     </>

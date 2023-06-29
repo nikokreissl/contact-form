@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes, css } from "styled-components";
 
-export default function FemaleStickFigure({ size, color, trigger }) {
+export default function FemaleStickFigure({
+  size,
+  colorActive,
+  colorInactive,
+  trigger,
+}) {
   const [playAnimation, setPlayAnimation] = useState(false);
+  const [color, setColor] = useState(trigger);
 
   useEffect(() => {
     if (trigger === true) {
+      setColor(colorActive);
       setPlayAnimation(true);
 
       setTimeout(() => {
         setPlayAnimation(false);
       }, 3000);
+    } else {
+      setColor(colorInactive);
     }
   }, [trigger]);
 
@@ -42,7 +51,6 @@ const StickFigureFrame = styled.div`
   position: relative;
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
-  border: 1px solid black;
 `;
 
 const StickFigureHead = styled.div`
