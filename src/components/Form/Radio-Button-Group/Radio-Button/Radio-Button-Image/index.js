@@ -37,11 +37,11 @@ export default function RadioButtonImage({ value, isChecked }) {
   }, [isChecked]);
 
   const images = {
-    Female: {
+    Frau: {
       checked: womanColored,
       not: womanBasic,
     },
-    Male: {
+    Mann: {
       checked: manColored,
       not: manBasic,
     },

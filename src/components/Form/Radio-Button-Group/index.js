@@ -13,15 +13,15 @@ export default function RadioButtonGroup({ validateInput }) {
   return (
     <div className="radio-button-container">
       <RadioButton
-        value="Female"
+        value="Frau"
         position="left"
-        isChecked={selectedValue === "Female"}
+        isChecked={selectedValue === "Frau"}
         onUpdateSelection={handleRadioChange}
       />
       <RadioButton
-        value="Male"
+        value="Mann"
         position="right"
-        isChecked={selectedValue === "Male"}
+        isChecked={selectedValue === "Mann"}
         onUpdateSelection={handleRadioChange}
       />
     </div>
