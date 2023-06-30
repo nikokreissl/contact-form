@@ -18,7 +18,8 @@ export default function FemaleStickFigure({
       setTimeout(() => {
         setPlayAnimation(false);
       }, 3000);
-    } else {
+    } else if (trigger === false) {
+      setPlayAnimation(false);
       setColor(colorInactive);
     }
   }, [trigger]);

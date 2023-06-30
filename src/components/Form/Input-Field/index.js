@@ -18,6 +18,7 @@ export default function InputField({
 
     if (value === "") {
       setValidationMessage(`Bitte ${fieldName} eingeben`);
+      validateInput(false);
     } else if (!regex.test(value)) {
       if (type !== "email") {
         setValidationMessage(title);
@@ -36,8 +37,10 @@ export default function InputField({
 
     if (inputValue === "") {
       setValidationMessage(`Bitte ${fieldName} eingeben`);
+      validateInput(false);
     } else if (!regex.test(value) && type === "email") {
       setValidationMessage(`Bitte E-Mail-Format prüfen: mail@beispiel.de`);
+      validateInput(false);
     }
   }
   return (
@@ -54,6 +57,8 @@ export default function InputField({
         pattern={pattern}
         title={title}
         value={inputValue}
+        minLength={1}
+        maxLength={30}
         required
       />
       <p className="validation-message">{validationMessage}</p>
