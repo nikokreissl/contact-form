@@ -49,7 +49,7 @@ const Spinner = styled.div`
   width: 24px;
   height: 24px;
   border: 4px solid rgba(0, 0, 0, 0.3);
-  border-left-color: var(--orange);
+  border-left-color: var(--white);
   border-radius: 50%;
   animation: ${spin} 1s linear infinite;
 `;
